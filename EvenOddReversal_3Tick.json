@@ -1,0 +1,14 @@
+{
+    "bot_name": "EvenOddReversal_3Tick",
+    "symbol": "R_10",
+    "stake": 1,
+    "duration": 3,
+    "duration_unit": "t",
+    "basis": "stake",
+    "trade_type": "DIGITEVEN",
+    "condition_logic": {
+        "type": "custom",
+        "script": "if (last_digits.slice(-3).every(d => d % 2 === 0)) return 'DIGITODD'; if (last_digits.slice(-3).every(d => d % 2 !== 0)) return 'DIGITEVEN'; return null;"
+    },
+    "loop": true
+}
